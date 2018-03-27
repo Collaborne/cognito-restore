@@ -60,7 +60,6 @@ function handleMap(argv) {
 							}
 
 							process.stdout.write(outputData);
-							process.stdout.write('\n');
 							return resolve(mappedUsers);
 						});
 					} catch (exportErr) {
