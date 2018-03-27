@@ -30,7 +30,7 @@ function mapUser(user, mapUserName, extraAttributes) {
 	const mappedAttributes = user.Attributes.reduce((agg, attribute) => Object.assign(agg, {[attribute.Name]: attribute.Value}), mappedExtraAttributes);
 	return Object.assign({
 		'cognito:username': mapUserName(mappedAttributes),
-		updated_at: user.UserLastModifiedDate,
+		updated_at: Date.parse(user.UserLastModifiedDate) / 1000,
 	}, mappedAttributes);
 }
 
