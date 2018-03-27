@@ -32,6 +32,8 @@ function mapUser(user, mapUserName, extraAttributes) {
 		// Assume MFA to be not enabled by default: If the user wants that they must provide the --attribute cognito:mfa_enabled=True command line argument.
 		'cognito:mfa_enabled': 'False',
 		'cognito:username': mapUserName(mappedAttributes),
+		email_verified: mappedAttributes.email ? 'True' : 'False',
+		phone_number_verified: mappedAttributes.phone_number ? 'True' : 'False',
 		updated_at: Date.parse(user.UserLastModifiedDate) / 1000,
 	}, mappedAttributes);
 }
