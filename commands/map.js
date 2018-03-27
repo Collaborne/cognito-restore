@@ -29,6 +29,8 @@ function mapUser(user, mapUserName, extraAttributes) {
 	const mappedExtraAttributes = extraAttributes.map(extraAttribute => extraAttribute.split(/=/, 2)).reduce((agg, kv) => Object.assign(agg, {[kv[0]]: kv[1]}), {});
 	const mappedAttributes = user.Attributes.reduce((agg, attribute) => Object.assign(agg, {[attribute.Name]: attribute.Value}), mappedExtraAttributes);
 	return Object.assign({
+		// Assume MFA to be not enabled by default: If the user wants that they must provide the --attribute cognito:mfa_enabled=True command line argument.
+		'cognito:mfa_enabled': 'False',
 		'cognito:username': mapUserName(mappedAttributes),
 		updated_at: Date.parse(user.UserLastModifiedDate) / 1000,
 	}, mappedAttributes);
