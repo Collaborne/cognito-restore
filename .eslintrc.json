@@ -1,0 +1,27 @@
+{
+	"root": true,
+	"env": {
+		"browser": false,
+		"commonjs": false,
+		"es6": true,
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": false
+		},
+		"sourceType": "module"
+	},
+
+	"extends": "eslint-config-collaborne",
+
+	"overrides": [
+		{
+			"files": "index.js",
+
+			"parserOptions": {
+				"sourceType": "script"
+			}
+		}
+	]
+}

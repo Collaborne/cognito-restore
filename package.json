@@ -1,0 +1,35 @@
+{
+  "name": "cognito-restore",
+  "version": "0.0.1",
+  "description": "Restore users from a cognito-backup JSON file",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo 'No tests yet'"
+  },
+  "bin": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Collaborne/cognito-restore.git"
+  },
+  "keywords": [
+    "cognito",
+    "AWs",
+    "restore",
+    "backup"
+  ],
+  "author": "Andreas Kohn <andreas.kohn@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Collaborne/cognito-restore/issues"
+  },
+  "homepage": "https://github.com/Collaborne/cognito-restore#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-collaborne": "^1.1.1"
+  },
+  "dependencies": {
+    "csv-parse": "^2.0.4",
+    "csv-stringify": "^2.0.4",
+    "yargs": "^11.0.0"
+  }
+}
