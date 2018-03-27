@@ -1,4 +1,4 @@
-# cognito-restore
+# cognito-restore [![Build Status](https://travis-ci.org/Collaborne/cognito-restore.svg?branch=master)](https://travis-ci.org/Collaborne/cognito-restore)
 
 This is a tool that can help restore users from a [cognito-backup](https://www.npmjs.com/package/cognito-backup) JSON file.
 
