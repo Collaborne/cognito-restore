@@ -24,5 +24,5 @@ Note that there are a number of requirements for the import: https://docs.aws.am
 
 The file `users.csv` can then be imported using the AWS Cognito Console.
 
-_FIXME: Describe how to use the aws-cli to do the importing_
+_FIXME: Describe how to use the aws-cli to do the importing_ \
 _FIXME: Implement a command for actually doing the importing._
