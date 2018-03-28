@@ -57,7 +57,7 @@ function handleMap(argv) {
 				return fs.readFile(argv.export, 'utf8', (exportFileErr, exportData) => {
 					try {
 						const users = JSON.parse(exportData);
-						const mapUserName = argv.usernameAttribute ? mappedAttributes => mappedAttributes[argv.usernameAttribute] : 'sub';
+						const mapUserName = mappedAttributes => mappedAttributes[argv.usernameAttribute ? argv.usernameAttribute : 'sub'];
 						const mappedUsers = mapUsers(users, mapUserName, argv.attribute);
 						const stringifyOptions = {
 							columns: keys[0],
