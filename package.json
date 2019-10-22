@@ -28,7 +28,7 @@
     "eslint-config-collaborne": "^1.5.0"
   },
   "dependencies": {
-    "csv-parse": "^2.0.4",
+    "csv-parse": "^4.6.5",
     "csv-stringify": "^2.0.4",
     "yargs": "^11.0.0"
   }
